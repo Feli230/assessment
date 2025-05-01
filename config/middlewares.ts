@@ -1,6 +1,13 @@
 export default [
   'strapi::logger',
   'strapi::errors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
+      credentials: true,
+    },
+  },
   'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
